@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Positivus Brand Colors */
+    --background: 255 255 255;
+    --foreground: 25 26 35;
+    --card: 255 255 255;
+    --card-foreground: 25 26 35;
+    --popover: 255 255 255;
+    --popover-foreground: 25 26 35;
+    --primary: 185 255 102;
+    --primary-foreground: 25 26 35;
+    --secondary: 243 243 243;
+    --secondary-foreground: 25 26 35;
+    --muted: 243 243 243;
+    --muted-foreground: 115 115 115;
+    --accent: 243 243 243;
+    --accent-foreground: 25 26 35;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 229 229 229;
+    --input: 229 229 229;
+    --ring: 185 255 102;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 25 26 35;
+    --foreground: 255 255 255;
+    --card: 25 26 35;
+    --card-foreground: 255 255 255;
+    --popover: 25 26 35;
+    --popover-foreground: 255 255 255;
+    --primary: 185 255 102;
+    --primary-foreground: 25 26 35;
+    --secondary: 55 56 63;
+    --secondary-foreground: 255 255 255;
+    --muted: 55 56 63;
+    --muted-foreground: 163 163 163;
+    --accent: 55 56 63;
+    --accent-foreground: 255 255 255;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 55 56 63;
+    --input: 55 56 63;
+    --ring: 185 255 102;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Typography styles for Positivus */
+  h1 {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: rgb(25 26 35);
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: rgb(25 26 35);
+  }
+
+  h3 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: rgb(25 26 35);
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: rgb(25 26 35);
+  }
+
+  h5 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: rgb(25 26 35);
+  }
+
+  /* Mobile typography */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 43px;
+    }
+
+    h2 {
+      font-size: 36px;
+    }
+
+    h3 {
+      font-size: 26px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+    h5 {
+      font-size: 16px;
+    }
+  }
+}
+
+@layer components {
+  /* Positivus Button Styles - Override shadcn defaults */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: rgb(185 255 102) !important;
+    color: rgb(25 26 35) !important;
+    border: none !important;
+  }
+
+  .btn-primary:hover {
+    background-color: rgb(185 255 102 / 0.9) !important;
+    color: rgb(25 26 35) !important;
+    transform: scale(1.05);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(25 26 35) !important;
+    color: rgb(25 26 35) !important;
+    background-color: transparent !important;
+  }
+
+  .btn-outline:hover {
+    background-color: rgb(25 26 35) !important;
+    color: rgb(255 255 255) !important;
+    border-color: rgb(25 26 35) !important;
+  }
+
+  /* Service Cards */
+  .service-card {
+    border-radius: 24px;
+    padding: 32px;
+    transition: all 0.3s ease;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px);
+  }
+
+  .service-card-light {
+    background-color: rgb(243 243 243);
+  }
+
+  .service-card-primary {
+    background-color: rgb(185 255 102);
+  }
+
+  .service-card-dark {
+    background-color: rgb(25 26 35);
+    color: rgb(255 255 255);
+  }
+
+  /* Company Cards */
+  .company-card {
+    border-radius: 16px;
+    padding: 24px 32px;
+    text-align: center;
+    min-width: 150px;
+    transition: all 0.3s ease;
+    background-color: rgb(243 243 243);
+  }
+
+  .company-card:hover {
+    background-color: rgb(185 255 102);
+  }
+}
