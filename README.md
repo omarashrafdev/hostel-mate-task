@@ -187,7 +187,7 @@ src/
 
 ## 🌟 Live Demo
 
-Visit the live demo: [Positivus Landing Page](https://your-vercel-url.vercel.app)
+Visit the live demo: [Positivus Landing Page](https://hostel-mate-task.vercel.app)
 
 ## 📄 License
 
